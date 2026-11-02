@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Contact MNL Tyres in Lebowakgomo for tyres, fitting, balancing, alignment and repairs."
+    >
+
+    <title>Contact Us | MNL Tyres</title>
+
+    <!-- Existing stylesheet -->
+    <link rel="stylesheet" href="stylemnl.css">
+
+    <!-- Leaflet map stylesheet -->
+    <link
+        rel="stylesheet"
+        href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    >
+
+    <!-- Additional interactive feature styles -->
+    <link rel="stylesheet" href="css/enhancements.css">
+
+    <!-- Leaflet must load before the enhancement script -->
+    <script
+        src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        defer
+    ></script>
+
+    <!-- Contact page script -->
+    <script src="contact.js" defer></script>
+</head>
+
+<body class="mnl-home">
+    <!-- Header -->
+    <header>
+        <a href="index.html">
+            <img
+                src="MNL logo.jpeg"
+                alt="MNL Tyres logo"
+                width="150"
+            >
+        </a>
+
+        <h1>MNL Tyres</h1>
+
+        <nav aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="products.html">Tyres</a>
+            <a href="services.html">Services</a>
+            <a
+                href="contactus.html"
+                aria-current="page"
+            >Contact Us</a>
+            <a href="enquiry.html">Request a Quote</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Contact introduction -->
+        <section aria-labelledby="contact-heading">
+            <h2 id="contact-heading">Contact Us</h2>
+
+            <p>
+                Get in touch with MNL Tyres for quality tyres,
+                professional fitting, wheel balancing, alignment
+                and tyre repairs in Lebowakgomo.
+            </p>
+        </section>
+
+        <!-- Contact details and form -->
+        <section class="contact-grid" aria-labelledby="contact-details-heading">
+            <div class="contact-info">
+                <h3 id="contact-details-heading">
+                    Our Contact Details
+                </h3>
+
+                <p>
+                    <strong>Location:</strong><br>
+                    Lebowakgomo,<br>
+                    Limpopo,<br>
+                    South Africa
+                </p>
+
+                <p>
+                    <strong>Phone:</strong><br>
+                    <a href="tel:+27676857872">
+                        +27 67 685 7872
+                    </a>
+                </p>
+
+                <p>
+                    <strong>Email:</strong><br>
+                    <a href="mailto:info@mnltyres.co.za">
+                        info@mnltyres.co.za
+                    </a>
+                </p>
+
+                <p>
+                    <strong>Business Hours:</strong><br>
+                    Monday–Friday: 08:00–17:00<br>
+                    Saturday: 08:00–13:00<br>
+                    Sunday and public holidays: Closed
+                </p>
+            </div>
+
+            <div class="contact-form">
+                <h3>Send Us a Message</h3>
+
+                <form
+                    id="contact-form"
+                    action="#"
+                    method="post"
+                    novalidate
+                >
+                    <label for="contact-name">
+                        Full Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="contact-name"
+                        name="name"
+                        required
+                        autocomplete="name"
+                    >
+
+                    <label for="contact-email">
+                        Email Address
+                    </label>
+
+                    <input
+                        type="email"
+                        id="contact-email"
+                        name="email"
+                        required
+                        autocomplete="email"
+                    >
+
+                    <label for="contact-phone">
+                        Phone Number
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="contact-phone"
+                        name="phone"
+                        autocomplete="tel"
+                    >
+
+                    <label for="contact-message">
+                        Your Message
+                    </label>
+
+                    <textarea
+                        id="contact-message"
+                        name="message"
+                        rows="6"
+                        required
+                    ></textarea>
+
+                    <button
+                        type="submit"
+                        class="mnl-button"
+                    >
+                        Send Message
+                    </button>
+
+                    <p
+                        id="contact-status"
+                        role="status"
+                    ></p>
+                </form>
+            </div>
+        </section>
+
+        <!-- Location map -->
+        <section aria-labelledby="map-heading">
+            <h2 id="map-heading">Find Us in Lebowakgomo</h2>
+
+            <p>
+                MNL Tyres is located in Lebowakgomo, Limpopo.
+            </p>
+
+            <div
+                id="mnl-map"
+                aria-label="Interactive map showing MNL Tyres in Lebowakgomo"
+            ></div>
+
+            <p id="map-status" role="status"></p>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 MNL Tyres. All rights reserved.</p>
+
+        <p>
+            <a href="contact.html">Contact Us</a>
+            |
+            <a href="enquiry.html">Request a Quote</a>
+        </p>
+    </footer>
+</body>
+</html>
