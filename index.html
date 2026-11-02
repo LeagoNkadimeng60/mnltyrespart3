@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="MNL Tyres provides quality tyres, tyre fitting, balancing, alignment and repair services."
+    >
+
+    <title>Home | MNL Tyres</title>
+
+    <!-- Existing stylesheet -->
+    <link rel="stylesheet" href="style mnl.css">
+
+    <!-- Leaflet map stylesheet -->
+    <link
+        rel="stylesheet"
+        href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    >
+
+    <!-- Additional interactive feature styles -->
+    <link rel="stylesheet" href="css/enhancements.css">
+
+    <!-- Leaflet must load before the enhancement script -->
+    <script
+        src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        defer
+    ></script>
+
+    <script
+    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    defer
+></script>
+
+<!-- Load all MNL Tyres interactive features -->
+<script src="script.js" defer></script>
+
+<body class="mnl-home">
+    <!-- Header -->
+    <header>
+        <a href="index.html">
+            <img
+                src="MNL logo.jpeg"
+                alt="MNL Tyres logo"
+                width="150"
+            >
+        </a>
+
+        <h1>MNL Tyres</h1>
+
+        <nav aria-label="Main navigation">
+            <a href="index.html" aria-current="page">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="products.html">Tyres</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="enquiry.html">Request a Quote</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Welcome -->
+        <section class="hero" aria-labelledby="welcome-heading">
+            <h2 id="welcome-heading">
+                Quality Tyres and Reliable Service
+            </h2>
+
+            <p>
+                MNL Tyres supplies quality tyres and provides
+                professional tyre-related services for cars,
+                SUVs, 4x4 vehicles and commercial vehicles.
+            </p>
+
+            <img
+                class="hero-image"
+                src="tyrefitted.jpg"
+                alt="A tyre fitted to a vehicle wheel"
+                width="400"
+            >
+
+            <p class="hero-links">
+                <a href="products.html" class="mnl-button">
+                    Browse our tyre range
+                </a>
+
+                <a href="enquiry.html" class="mnl-button">
+                    Request a quote
+                </a>
+            </p>
+        </section>
+
+        <!-- Service accordion -->
+        <section aria-labelledby="services-heading">
+            <h2 id="services-heading">Our Services</h2>
+            <p>Select a service to view its details.</p>
+
+            <div class="service-accordion">
+                <h3>
+                    <button
+                        type="button"
+                        class="service-toggle"
+                        id="fitting-button"
+                        aria-expanded="true"
+                        aria-controls="fitting-panel"
+                    >
+                        Tyre Fitting
+                    </button>
+                </h3>
+
+                <div
+                    id="fitting-panel"
+                    class="service-panel"
+                    role="region"
+                    aria-labelledby="fitting-button"
+                >
+                    <p>
+                        We fit tyres professionally to help keep
+                        your vehicle safe on the road.
+                    </p>
+                    <a href="services.html">
+                        Learn more about fitting
+                    </a>
+                </div>
+
+                <h3>
+                    <button
+                        type="button"
+                        class="service-toggle"
+                        id="balancing-button"
+                        aria-expanded="true"
+                        aria-controls="balancing-panel"
+                    >
+                        Wheel Balancing
+                    </button>
+                </h3>
+
+                <div
+                    id="balancing-panel"
+                    class="service-panel"
+                    role="region"
+                    aria-labelledby="balancing-button"
+                >
+                    <p>
+                        Wheel balancing helps provide a smoother
+                        driving experience and reduces uneven tyre wear.
+                    </p>
+                    <a href="services.html">View all services</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dynamic gallery -->
+        <section aria-labelledby="gallery-heading">
+            <h2 id="gallery-heading">Our Gallery</h2>
+            <p>Select an image to open a larger view.</p>
+
+            <label for="gallery-filter">Show:</label>
+
+            <select id="gallery-filter">
+                <option value="all">All images</option>
+                <option value="tyres">Tyres</option>
+                <option value="brand">MNL Tyres branding</option>
+            </select>
+
+            <p id="gallery-status" role="status"></p>
+
+            <div id="mnl-gallery" class="mnl-gallery"></div>
+
+            <noscript>
+                <p>
+                    Enable JavaScript to use the gallery and map.
+                    You can still browse our
+                    <a href="products.html">tyre range</a>.
+                </p>
+            </noscript>
+        </section>
+
+        <!-- Interactive map -->
+        <section aria-labelledby="map-heading">
+            <h2 id="map-heading">Location Map</h2>
+
+            <p>
+                Demonstration location only. This marker does not
+                represent a verified MNL Tyres branch.
+            </p>
+
+            <div
+                id="mnl-map"
+                aria-label="Interactive demonstration location map"
+            ></div>
+
+            <p id="map-status" role="status"></p>
+        </section>
+    </main>
+
+    <!-- Gallery lightbox -->
+    <dialog id="gallery-lightbox" aria-labelledby="lightbox-caption">
+        <button
+            type="button"
+            id="lightbox-close"
+            class="mnl-button"
+            autofocus
+        >
+            Close
+        </button>
+
+        <figure>
+            <img id="lightbox-image" alt="">
+            <figcaption id="lightbox-caption"></figcaption>
+        </figure>
+
+        <div class="lightbox-controls">
+            <button
+                type="button"
+                id="lightbox-previous"
+                class="mnl-button"
+            >
+                Previous
+            </button>
+
+            <button
+                type="button"
+                id="lightbox-next"
+                class="mnl-button"
+            >
+                Next
+            </button>
+        </div>
+
+        <p class="keyboard-hint">
+            Use the left and right arrow keys to change images.
+            Press Escape to close.
+        </p>
+    </dialog>
+
+    <footer>
+        <p>&copy; 2026 MNL Tyres. All rights reserved.</p>
+
+        <p>
+            <a href="contact.html">Contact Us</a>
+            |
+            <a href="enquiry.html">Request a Quote</a>
+        </p>
+    </footer>
+
+   
+</body>
+</html>
